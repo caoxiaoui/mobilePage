@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./../lib/js/vue.js"></script>
+  <script src="./../lib/js/mobile.js"></script>
+  <link rel="stylesheet" href="./../lib/css/common.css">
+  <link rel="stylesheet" href="./../lib/css/eqinfo.css">
+</head>
+
+<body>
+  <div id="upkeep">
+    <header class="bar bar-nav">
+      <a class="action-back icon icon-left-nav pull-left" @click='back'></a>
+      <h1 class="title inblok">保养信息</h1>
+    </header>
+
+    <nav class="bar bar-tab btm">
+      <a class="tab-item" href="./../home.html">
+        首页
+      </a>
+      <a class="tab-item" href="./eqList.html">
+        设备列表
+      </a>
+      <a class="tab-item active" href="./upkeep.html">
+        保养信息
+      </a>
+      <a class="tab-item" href="#">
+        我的
+      </a>
+    </nav>
+  </div>
+
+  <script>
+    var vm = new Vue({
+      el:'#upkeep',
+      data:{
+
+      },
+      methods: {
+        back() {
+          window.history.back(-1)
+        }
+      },
+    })
+  
+  </script>
+</body>
+
+</html>

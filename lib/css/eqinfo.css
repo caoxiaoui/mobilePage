@@ -1,0 +1,71 @@
+/* 设备图片 */
+.eq-pic {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.eq-pic img {
+  width: 7.5rem;
+  margin: 0 auto;
+}
+
+.eq-pic::after {
+  display: block;
+  content: ' ';
+  height: 1px;
+  background: #ccc;
+}
+
+/* 设备图片 */
+
+/* 设备信息 */
+.eq-info {
+  width: 100%;
+  height: auto;
+}
+
+.eq-info .eq-name-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.1rem;
+  box-shadow: 0px 1px 1px;
+}
+
+.eq-info .eq-name-content .eq-name h1 {
+  font-size: 0.3rem;
+  font-weight: 600;
+  color: #032e58;
+}
+
+.eq-info .eq-name-content .eq-stats h5 {
+  background: #007aff;
+  border-radius: 100px;
+  padding: 3px 6px;
+  color: white;
+  font-size: 0.22rem;
+}
+
+.eq-info-content .table table .tdTitle {
+  width: 195px;
+  width: 1.95rem;
+}
+
+.eq-info-content .table table td {
+  font-size: 0.24rem;
+  padding: 8px;
+  border: 1px solid #dadada;
+  text-align: left;
+  vertical-align: baseline;
+}
+
+.eq-info-content .table table th {
+  padding: 8px;
+  /* border: 1px solid #dadada; */
+  text-align: left;
+  vertical-align: baseline;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* 设备信息 */

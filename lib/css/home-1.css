@@ -1,0 +1,48 @@
+.fx-top {
+  width: 100%;
+  height: 0.5rem;
+  background: rgba(0, 0, 0, 0.9);
+  color: #cccccc;
+  line-height: 0.5rem;
+}
+
+.bar {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-bottom: 0;
+  background-color: #f7f7f7;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .85);
+  box-shadow: 0 0 5px rgba(0, 0, 0, .85);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bar.bar-nav {
+  text-align: center;
+}
+
+.bar.btm {
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon-left-nav {
+  margin-right: -3px;
+  margin-left: 10px;
+  position: absolute;
+  left: 0;
+}
+
+.icon-left-nav::before {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  color: rgb(224, 11, 11);
+  content: '';
+  background: url(./../fonts/fanhui.png) no-repeat transparent center;
+}

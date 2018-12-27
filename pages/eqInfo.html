@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./../lib/js/vue.js"></script>
+  <script src="./../lib/js/mobile.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="./../lib/css/common.css">
+  <link rel="stylesheet" href="./../lib/css/eqinfo.css">
+</head>
+
+<body>
+  <div id="eqinfo">
+    <header class="bar bar-nav">
+      <a class="action-back icon icon-left-nav pull-left" @click='back'></a>
+      <h1 class="title inblok">设备详细信息</h1>
+    </header>
+
+    <!-- content -->
+    <div class="content">
+      <div class="eq-pic">
+        <img src="./../lib/img/1.png" alt="1.png">
+      </div>
+      <div class="eq-info" v-for="item in eqList" :key="item.id" v-if="urlid == item.id">
+        <!-- 设备名，状态 -->
+        <div class="eq-name-content">
+          <div class="eq-name">
+            <h1>{{ item.name }}</h1>
+          </div>
+          <div class="eq-stats">
+            <h5>{{ item.stats }}</h5>
+          </div>
+        </div>
+        <!-- 设备详细信息 -->
+        <div class="eq-info-content">
+          <div class="table">
+            <table cellpadding='0' cellspacing='1' width='100%' border="0">
+              <!-- 基本信息 -->
+              <tbody>
+                <tr>
+                  <th>基本信息</th>
+                </tr>
+                <tr>
+                  <td class="tdTitle">分类</td>
+                  <td>天然气调压计量撬</td>
+                </tr>
+                <tr>
+                  <td class="tdTitle">编码</td>
+                  <td>{{ item.eqCode }}</td>
+                </tr>
+                <tr>
+                  <td class="tdTitle">型号</td>
+                  <td>{{ item.eqModel }}</td>
+                </tr>
+                <tr>
+                  <td class="tdTitle">规格</td>
+                  <td>{{ item.eqSpec }}</td>
+                </tr>
+                <tr>
+                  <td class="tdTitle">厂家及产地</td>
+                  <td>{{ item.eqChandi }}</td>
+                </tr>
+                <tr>
+                  <td class="tdTitle">安装地址</td>
+                  <td>{{ item.eqAnzhuang}}</td>
+                </tr>
+              </tbody>
+              <!-- 动态采集 -->
+              <tbody>
+                <tr>
+                  <th>动态采集信息</th>
+                </tr>
+                <tr>
+                  <td class="tdTitle">城市</td>
+                  <td>克拉玛依</td>
+                </tr>
+                <tr>
+                  <td class="tdTitle">天气</td>
+                  <td>小雪转多云</td>
+                </tr>
+                <tr>
+                  <td class="tdTitle">气温(℃)</td>
+                  <td>-15.00</td>
+                </tr>
+                <tr>
+                  <td class="tdTitle">湿度(%)</td>
+                  <td>76.00</td>
+                </tr>
+                <tr>
+                  <td class="tdTitle">上电状态</td>
+                  <td>通电</td>
+                </tr>
+                <tr>
+                  <td class="tdTitle">电伴热1状态</td>
+                  <td>开</td>
+                </tr>
+                <tr>
+                  <td class="tdTitle">电伴热2状态</td>
+                  <td>开</td>
+                </tr>
+                <tr>
+                  <td class="tdTitle">电机1运行状态</td>
+                  <td>运行</td>
+                </tr>
+                <tr>
+                  <td class="tdTitle">采集时间</td>
+                  <td>2018-12-26 14:10:04</td>
+                </tr>
+                <tr>
+                  <td class="tdTitle">累计运行时间</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- content -->
+
+
+    <nav class="bar bar-tab btm">
+      <a class="tab-item" href="./../home.html">
+        首页
+      </a>
+      <a class="tab-item active" href="./eqList.html">
+        设备列表
+      </a>
+      <a class="tab-item" href="./upkeep.html">
+        保养信息
+      </a>
+      <a class="tab-item" href="#">
+        我的
+      </a>
+    </nav>
+  </div>
+
+
+  <script>
+    var vm = new Vue({
+      el: "#eqinfo",
+      data: {
+        eqid: '',
+        urlid: '',
+        data: '',
+        eqList: [{
+            id: 1,
+            name: "天然气脱固撬",
+            stats: "运行中",
+            eqCode: "XXXXXXXXX",
+            eqModel: "SSSSSSSSS",
+            eqSpec: "480KW 1.0MPa 20t",
+            eqChandi: "经济技术开发区育详街66A号",
+            eqAnzhuang: "采育经济开发区育祥街6号115A"
+          },
+          {
+            id: 2,
+            name: "三相分离器撬",
+            stats: "运行中",
+            eqCode: "XXXXXXXXX",
+            eqModel: "SSSSSSSSS",
+            eqSpec: "480KW 1.0MPa 20t",
+            eqChandi: "经济技术开发区育详街66A号",
+            eqAnzhuang: "采育经济开发区育祥街6号115A"
+          },
+          {
+            id: 3,
+            name: "增压站螺杆压缩机入口高效过滤分离撬",
+            stats: "运行中",
+            eqCode: "XXXXXXXXX",
+            eqModel: "SSSSSSSSS",
+            eqSpec: "480KW 1.0MPa 20t",
+            eqChandi: "经济技术开发区育详街66A号",
+            eqAnzhuang: "采育经济开发区育祥街6号115A"
+          },
+          {
+            id: 4,
+            name: "加热节流撬",
+            stats: "运行中",
+            eqCode: "XXXXXXXXX",
+            eqModel: "SSSSSSSSS",
+            eqSpec: "480KW 1.0MPa 20t",
+            eqChandi: "经济技术开发区育详街66A号",
+            eqAnzhuang: "采育经济开发区育祥街6号115A"
+          },
+          {
+            id: 5,
+            name: "稠油管式分离多相计量装置",
+            stats: "运行中",
+            eqCode: "XXXXXXXXX",
+            eqModel: "SSSSSSSSS",
+            eqSpec: "480KW 1.0MPa 20t",
+            eqChandi: "经济技术开发区育详街66A号",
+            eqAnzhuang: "采育经济开发区育祥街6号115A"
+          },
+          {
+            id: 6,
+            name: "热水撬",
+            stats: "未运行",
+            eqCode: "DM2017-M019",
+            eqModel: "DMH-TD-1.0-480",
+            eqSpec: "480KW 1.0MPa 20t",
+            eqChandi: "经济技术开发区育详街66A号",
+            eqAnzhuang: "采育经济开发区育祥街6号115A"
+          }
+        ]
+      },
+      methods: {
+        back() {
+          window.history.back(-1);
+        },
+        getID() {
+          var urlstr = decodeURI(location.search)
+          console.log('urlstr:' + urlstr)
+          this.urlid = urlstr.substring(1)
+          console.log("id:" + this.urlid)
+        }
+      },
+      mounted() {
+        this.getID()
+        axios.get('http://datachn.com/ApiServlet?method=detail&id=177')
+          .then(response => {
+            this.data = response
+            console.log(typeof (response))
+            console.log(response.data)
+          })
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+/* 设备列表 */
+
+.c-table-view-cell {
+  position: relative;
+  overflow: hidden;
+  padding: 11px 15px;
+  -webkit-touch-callout: none
+}
+
+.c-table-view-cell:after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 15px;
+  height: 1px;
+  content: '';
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  background-color: #c8c7cc
+}
+
+.oa-contact-cell.c-table {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.oa-contact-avatar img {
+  width: 2rem;
+  border-radius: 5px;
+}
+
+.oa-contact-content.c-table-cell {
+  margin-left: 15px;
+  width: 100%;
+}
+.oa-contact-name{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.oa-contact-name a{
+  color: #095a9b;
+}
+.c-h4 {
+  font-size: 0.24rem;
+  color: #3f3f3f;
+}
+
+.c-h6 {
+  font-size: 0.24rem;
+  color: #686868;
+}
+
+/* 设备列表 */

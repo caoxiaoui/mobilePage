@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./lib/css/common.css">
+  <link rel="stylesheet" href="./lib/css/home-1.css">
+  <script src="./lib/js/vue.js"></script>
+  <script src="./lib/js/mobile.js"></script>
+  <style>
+    #app .content {
+      padding-top: 0.5rem;
+    }
+
+    .swiper-container {
+      width: 600px;
+      height: auto;
+      text-align: center;
+      width: 7.5rem;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+</head>
+
+<body>
+  <div id="app">
+    <header class="bar bar-nav">
+      <a class="action-back icon icon-left-nav pull-left"></a>
+      <h1 class="title inblok">首页</h1>
+    </header>
+
+    <!-- content -->
+    <div class="content">
+      <!-- swiper 轮播图 -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./lib/img/1.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="./lib/img/1.png" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="./lib/img/1.png" alt="">
+          </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- swiper 轮播图 -->
+      
+
+
+    </div>
+    <!-- content -->
+
+    <nav class="bar bar-tab btm">
+      <a class="tab-item active" href="#">
+        首页
+      </a>
+      <a class="tab-item" href="./pages/eqList.html">
+        设备列表
+      </a>
+      <a class="tab-item" href="./pages/upkeep.html">
+        保养信息
+      </a>
+      <a class="tab-item" href="#">
+        我的
+      </a>
+    </nav>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+  <script>
+    var mySwiper = new Swiper('.swiper-container', {
+      autoplay: true,
+      direction: 'horizontal', // 横向切换选项
+      loop: true, // 循环模式选项
+      pagination: { // 如果需要分页器
+        el: '.swiper-pagination',
+      }
+    })
+  </script>
+</body>
+
+</html>

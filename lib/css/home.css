@@ -1,0 +1,138 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2018-11-22, 15:34:39
+    Author     : caowang
+*/
+
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*效果图750px*/
+html {
+  font-size: 100px;
+  font-family: '微软雅黑', '苹方', '思源黑体';
+}
+
+/*Android常用宽度*/
+@media(max-width:640px) {
+  html {
+    font-size: 85.33px;
+  }
+}
+
+/*Android常用宽度*/
+@media(max-width:540px) {
+  html {
+    font-size: 72px;
+  }
+}
+
+/*Android常用宽度*/
+@media(max-width:480px) {
+  html {
+    font-size: 64px;
+  }
+}
+
+@media(max-width:445px) {
+  html {
+    font-size: 60px;
+  }
+}
+
+/*i6Plus,i7Plus宽度*/
+@media(max-width:414px) {
+  html {
+    font-size: 55.2px;
+  }
+}
+
+/*i6,i7宽度*/
+@media(max-width:375px) {
+  html {
+    font-size: 50px;
+  }
+}
+
+/*Android常用宽度*/
+@media(max-width:360px) {
+  html {
+    font-size: 48px;
+  }
+}
+
+/*i5宽度*/
+@media(max-width:320px) {
+  html {
+    font-size: 42.67px;
+  }
+}
+
+body {
+  font-size: 0.28rem;
+}
+
+ul,
+ol,
+dl,
+li,
+dd,
+dt {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(86, 86, 86);
+}
+
+/* 按钮类型 */
+.btn {
+  display: inline-block;
+  padding: 0.05rem;
+  background: #ffffff;
+  color: #333333;
+  border: 0.01rem solid #cccccc;
+  border-radius: 0.05rem;
+  outline: none;
+}
+
+/* 文本类型 */
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.txtl {
+  text-align: left;
+}
+
+.txtc {
+  text-align: center;
+}
+
+.txtr {
+  text-align: right;
+}
+
+/* 定位 */
+.fixed-top {
+  position: fixed;
+  top: 0;
+}
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+}

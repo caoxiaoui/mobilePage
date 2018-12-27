@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./../lib/js/vue.js"></script>
+  <script src="./../lib/js/mobile.js"></script>
+  <link rel="stylesheet" href="./../lib/css/common.css">
+  <link rel="stylesheet" href="./../lib/css/eqlist.css">
+  <style>
+    #list .content {
+      padding-top: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="list">
+    <header class="bar bar-nav">
+      <a class="action-back icon icon-left-nav pull-left" @click='back'></a>
+      <h1 class="title inblok">设备列表</h1>
+    </header>
+
+    <!-- content -->
+    <div class="content">
+      <div id="tabbar-with-contact" class="c-control-content c-active">
+        <ul class="c-table-view c-table-view-striped c-table-view-condensed" v-for="item in eqList" :key="item.id">
+          <li class="c-table-view-cell">
+            <div class="c-slider-cell">
+              <div class="oa-contact-cell c-table">
+                <div class="oa-contact-avatar c-table-cell">
+                  <img src="./../lib/img/1.png" />
+                </div>
+                <div class="oa-contact-content c-table-cell">
+                  <div class="c-clearfix">
+                    <h4 class="oa-contact-name"><a @click.prevent="eqmore(item.id)">{{item.name}}</a></h4>
+                  </div>
+                  <p class="c-h6">
+                    <span class="oa-contact-position c-h6">型号:</span>
+                    <span class="oa-contact-position c-h4">{{item.eqCode}}</span>
+                  </p>
+                  <p class="c-h6">
+                    <span class="oa-contact-position c-h6">编号:</span>
+                    <span class="oa-contact-position c-h4">{{item.eqModel}}</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <eqinfo></eqinfo>
+    <!-- content -->
+
+    <nav class="bar bar-tab btm">
+      <a class="tab-item" href="./../home.html">
+        首页
+      </a>
+      <a class="tab-item active" href="#">
+        设备列表
+      </a>
+      <a class="tab-item" href="./upkeep.html">
+        保养信息
+      </a>
+      <a class="tab-item" href="#">
+        我的
+      </a>
+    </nav>
+  </div>
+
+  <!-- // 组件 -->
+  <template id="temp">
+    <div>
+      <h1>详细信息组件</h1>
+      <h1>id:{{ this.eqid }}</h1>
+    </div>
+  </template>
+  <!-- // 组件 -->
+  <script>
+    // 组件
+    Vue.component('eqinfo', {
+      template: '#temp'
+    })
+    // 组件
+
+    var vm = new Vue({
+      el: "#list",
+      data: {
+        eqList: [{
+            id: 1,
+            name: "天然气脱固撬",
+            stats: "运行中",
+            eqCode: "XXXXXXXXX",
+            eqModel: "SSSSSSSSS"
+          },
+          {
+            id: 2,
+            name: "三相分离器撬",
+            stats: "运行中",
+            eqCode: "XXXXXXXXX",
+            eqModel: "SSSSSSSSS"
+          },
+          {
+            id: 3,
+            name: "增压站螺杆压缩机入口高效过滤分离撬",
+            stats: "运行中",
+            eqCode: "XXXXXXXXX",
+            eqModel: "SSSSSSSSS"
+          },
+          {
+            id: 4,
+            name: "加热节流撬",
+            stats: "运行中",
+            eqCode: "XXXXXXXXX",
+            eqModel: "SSSSSSSSS"
+          },
+          {
+            id: 5,
+            name: "稠油管式分离多相计量装置",
+            stats: "运行中",
+            eqCode: "XXXXXXXXX",
+            eqModel: "SSSSSSSSS"
+          },
+          {
+            id: 6,
+            name: "热水撬",
+            stats: "未运行",
+            eqCode: "XXXXXXXXX",
+            eqModel: "SSSSSSSSS"
+          }
+        ]
+      },
+      methods: {
+        back() { //返回上一页
+          window.history.go(-1);
+        },
+        eqmore(id) {
+          console.log("id:" + id)
+          window.location.href="./eqinfo.html?"+id
+        }
+      },
+    })
+  </script>
+</body>
+
+</html>
