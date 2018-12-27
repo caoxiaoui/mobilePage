@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./../lib/js/vue.js"></script>
+  <script src="./../lib/js/mobile.js"></script>
+  <link rel="stylesheet" href="./../lib/css/common.css">
+</head>
+
+<body>
+  <div id="me">
+    <header class="bar bar-nav">
+      <a class="action-back icon icon-left-nav pull-left" @click='back'></a>
+      <h1 class="title inblok">我的</h1>
+    </header>
+
+    <!--页面主内容区开始-->
+    <div class="c-page-content">
+      <div class="c-scroll-wrapper">
+        <div class="c-scroll">
+          <ul class="c-table-view c-table-view-chevron">
+            <li class="c-table-view-cell c-media">
+              <a class="c-navigate-right" href="#account">
+                <img class="c-media-object c-pull-left head-img" id="head-img" src="">
+                <div class="c-media-body">
+                  Hello c
+                  <p class='c-ellipsis'>账号:helloc</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <ul class="c-table-view c-table-view-chevron">
+            <li class="c-table-view-cell">
+              <a href="#account" class="c-navigate-right">账号与安全</a>
+            </li>
+          </ul>
+          <ul class="c-table-view c-table-view-chevron">
+            <li class="c-table-view-cell">
+              <a href="#notifications" class="c-navigate-right">新消息通知</a>
+            </li>
+            <li class="c-table-view-cell">
+              <a href="#privacy" class="c-navigate-right">隐私</a>
+            </li>
+            <li class="c-table-view-cell">
+              <a href="#general" class="c-navigate-right">通用</a>
+            </li>
+          </ul>
+          <ul class="c-table-view c-table-view-chevron">
+            <li class="c-table-view-cell">
+              <a href="#about" class="c-navigate-right">关于c <i class="c-pull-right update">V3.1.0</i></a>
+            </li>
+          </ul>
+          <ul class="c-table-view">
+            <li class="c-table-view-cell" style="text-align: center;">
+              <a>退出登录</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--页面主内容区结束-->
+    <nav class="bar bar-tab btm">
+      <a class="tab-item" href="./../home.html">
+        首页
+      </a>
+      <a class="tab-item" href="./eqList.html">
+        设备列表
+      </a>
+      <a class="tab-item" href="./upkeep.html">
+        保养信息
+      </a>
+      <a class="tab-item active" href="./me.html">
+        我的
+      </a>
+    </nav>
+  </div>
+  <script>
+    var vm = new Vue({
+      el: "#me",
+      data: {},
+      methods: {
+        back() {
+          window.history.back(-1)
+        }
+      },
+    })
+  </script>
+</body>
+
+</html>

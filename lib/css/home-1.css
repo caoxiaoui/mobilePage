@@ -46,3 +46,35 @@
   content: '';
   background: url(./../fonts/fanhui.png) no-repeat transparent center;
 }
+
+/* 九宫格 */
+.btn-link {
+  width: 100%;
+  height: auto;
+  position: relative;
+  left: 0;
+  right: 0;
+  padding: 0.4rem;
+}
+
+.btn-link .btn-link-box li {
+  width: 32%;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-link .btn-link-box li p {
+  /* display: flex; */
+  /* justify-content: center; */
+  vertical-align: middle;
+  padding: 30px 0px;
+  cursor: pointer;
+}
+
+.btn-link .btn-link-box li .iconfont {
+  width: 0.6rem;
+  height: 0.6rem;
+  background: #cccccc;
+  display: block;
+  margin: 0 auto;
+}

@@ -37,6 +37,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  cursor: pointer;
 }
 .oa-contact-name a{
   color: #095a9b;
