@@ -223,6 +223,7 @@
       mounted() {
         this.getID()
         axios.get('http://datachn.com/ApiServlet?method=detail&id=177')
+        axios.get('http://datachn.com/ApiServlet?method=equipmentList')
           .then(response => {
             this.data = response
             console.log(typeof (response))
